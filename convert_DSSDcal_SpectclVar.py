@@ -43,10 +43,8 @@ def main(input_file, output_file):
 
             side      = int(parts[0])
             strip     = int(parts[1])
-            gain      = float(parts[2])
+            slope      = float(parts[2])
             offset    = float(parts[3])
-            # gain_err  = float(parts[4])   # not used here
-            # off_err   = float(parts[5])   # not used here
 
             # convert side to SiFront / SiBack
             side_name = side_to_name(side)
@@ -62,7 +60,7 @@ def main(input_file, output_file):
 
             lines_out.append(f"{prefix}.Thr {DEFAULT_THR} {{}}")
             lines_out.append(f"{prefix}.offset {offset} {{}}")
-            lines_out.append(f"{prefix}.slope {gain} {{}}")
+            lines_out.append(f"{prefix}.slope {slope} {{}}")
             lines_out.append(f"{prefix}.time_offset {DEFAULT_TIME_OFFSET} {{}}")
 
     # write output file
