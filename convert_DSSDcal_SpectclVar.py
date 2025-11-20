@@ -58,14 +58,6 @@ def main(input_file, output_file):
                     f"Line {lineno}: strip index became negative after -1: strip={strip}"
                 )
 
-            # Now build the 4 lines for this channel:
-            # Thr, offset, slope (from gain), time_offset
-            # Example:
-            # treevariable -set DDASV.SiBack0.Thr 0 {}
-            # treevariable -set DDASV.SiBack0.offset 0 {}
-            # treevariable -set DDASV.SiBack0.slope 1.028 {}
-            # treevariable -set DDASV.SiBack0.time_offset 0 {}
-
             prefix = f"treevariable -set DDASV.{side_name}{strip_index}"
 
             lines_out.append(f"{prefix}.Thr {DEFAULT_THR} {{}}")
