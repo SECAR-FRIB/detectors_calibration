@@ -1,7 +1,7 @@
 # detectors_calibration
 Root scripts for detectors calibration
 * DSSD calibration
-  * Run first the DSSD_AnalyseSpectra.C for finding the peaks' channel location per strip for a calibration run
+  * Run first the DSSD_AnalyseSpectra.C for finding the peaks' channel location per strip for a calibration run (read the dedicated readme for more details)
     * run as root -l DSSD_AnalyseSpectra.C
     * creates txt file with peak location and uncertainty in channels
     * saves PNG images of the peak fitting (optional)
