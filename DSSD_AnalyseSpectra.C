@@ -109,7 +109,7 @@ void DSSD_AnalyseSpectra()
     chan = i%16;
     
     //Set the histogram to be filled, the gate and the histogram name
-    sprintf(hCommand,"energy_Si_raw>>h");
+    sprintf(hCommand,"energy_Si_raw[%d]>>h",i);
     sprintf(gate,"energy_Si_raw[%d]>0",i); 
 
     char sideChar;
