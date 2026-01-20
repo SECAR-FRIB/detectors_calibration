@@ -64,7 +64,7 @@ TFile* pFile = new TFile("/mnt/analysis/{exp_number}/dumpedfiles/run{number}.roo
 
 ##### 2) Channel selection (crate / module / channel)
 
-Crate 0 i the target, crate 1 is the FP4 detectors. Modules start from 2 (0 and 1 are reserrved for the PC) so for example if the daq map file shows a detector on module 0 here it is 2, or if it is at 3 it corresponds to 5. That's why there is a +2 on the plotMod variable.
+Crate 0 is at the target, crate 1 is at FP4 detectors. Modules start from 2 (0 and 1 are reserrved for the PC) so for example if the daq map file shows a detector on module 0 here it is 2, or if it is at 3 it corresponds to 5. That's why there is a +2 on the plotMod variable.
 
 ```cpp
 int plotCrate = 1; // 0 for target and 1 for FP4 (per comment in the script)
