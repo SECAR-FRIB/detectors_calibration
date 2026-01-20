@@ -3,7 +3,7 @@
 This repository contains scripts that are used for calibrating the various detectors of SECAR system. It also contains a script for plotting traces
 
 ## Requirements
-For using the scripts the data must be in ROOT format either raw or sorted. Use the codes from [analysis_root repo]([url](https://github.com/SECAR-FRIB/analysis_root)) to convert the evt files to root.
+For using the scripts the data must be in ROOT format either raw or sorted. Use the codes from [analysis_root repo](https://github.com/SECAR-FRIB/analysis_root) to convert the evt files to root.
 
 ### DSSD calibration
   * Run first the DSSD_AnalyseSpectra.C for finding the peaks' channel location per strip for a calibration run (read the dedicated readme for more details)
@@ -27,7 +27,7 @@ For using the scripts the data must be in ROOT format either raw or sorted. Use 
 
 #### `plot_traces.C`
 
-ROOT macro for quickly plotting **DDAS digitizer traces** (ADC samples vs sample index) from a SECAR “dumpedfiles” ROOT file. To create it run the create_rawROOT.sh from the sort_runs.sh script that is in the [analysis_root repo]([url](https://github.com/SECAR-FRIB/analysis_root))
+ROOT macro for quickly plotting **DDAS digitizer traces** (ADC samples vs sample index) from a SECAR “dumpedfiles” ROOT file. To create it run the create_rawROOT.sh from the sort_runs.sh script that is in the [analysis_root repo](https://github.com/SECAR-FRIB/analysis_root)
 
 It opens a ROOT file, reads the `dchan` TTree, loops over `ddasevent` entries, selects a specific **crate / module(slot) / channel**, pulls the waveform trace (`GetTrace()`), and overlays up to `maxTracesToPlot` traces on a canvas.
 
@@ -57,8 +57,7 @@ root -l plot_traces.C
 Open `plot_traces.C` and adjust these knobs near the top of `plot_traces()`:
 
 ##### 1) Input file path
-This script uses the "raw" ROOT file. To create it run the create_rawROOT.sh from the sort_runs.sh script that is in the [root analysis repo]([url](https://github.com/SECAR-FRIB/analysis_root))
-
+This script uses the "raw" ROOT file. 
 ```cpp
 TFile* pFile = new TFile("/mnt/analysis/{exp_number}/dumpedfiles/run{number}.root");
 ```
