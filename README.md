@@ -1,6 +1,12 @@
-# detectors_calibration
-Root scripts for detectors calibration
-* DSSD calibration
+
+# Root scripts for detectors calibration and simple analysis tasks
+This repository contains scripts that are used for calibrating the various detectors of SECAR system. It also contains a script for plotting traces
+
+## Requirements
+For using the scripts the obtained runs must be in ROOT format either raw (traces) or sorted. Use the codes from analysis_root repo to convert the evt files to root.
+
+
+## DSSD calibration
   * Run first the DSSD_AnalyseSpectra.C for finding the peaks' channel location per strip for a calibration run (read the dedicated readme for more details)
     * run as root -l DSSD_AnalyseSpectra.C
     * creates txt file with peak location and uncertainty in channels
@@ -12,7 +18,7 @@ Root scripts for detectors calibration
   * Use the convert_DSSDcal_SpectclVar.py script for converting the calibration parameters to Spectcl format
     * creates a txt file with the calibration parameters per script in Spectcl definition file format 
 
-* TAC calibration
+## TAC calibration
   * Use calibrate_TAC.C script to obtain TAC calibration
     * creates a PNG of TAC histogram with marks on peaks 
     * creates a PNG of TAC calibration
