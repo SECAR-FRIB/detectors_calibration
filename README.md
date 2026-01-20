@@ -3,7 +3,7 @@
 This repository contains scripts that are used for calibrating the various detectors of SECAR system. It also contains a script for plotting traces
 
 ## Requirements
-For using the scripts the obtained runs must be in ROOT format either raw (traces) or sorted. Use the codes from [analysis_root repo]([url](https://github.com/SECAR-FRIB/analysis_root)) to convert the evt files to root.
+For using the scripts the data must be in ROOT format either raw or sorted. Use the codes from [analysis_root repo]([url](https://github.com/SECAR-FRIB/analysis_root)) to convert the evt files to root.
 
 ### DSSD calibration
   * Run first the DSSD_AnalyseSpectra.C for finding the peaks' channel location per strip for a calibration run (read the dedicated readme for more details)
