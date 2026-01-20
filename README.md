@@ -27,7 +27,7 @@ For using the scripts the data must be in ROOT format either raw or sorted. Use 
 
 #### `plot_traces.C`
 
-ROOT macro for quickly plotting **DDAS digitizer traces** (ADC samples vs sample index) from a SECAR “dumpedfiles” ROOT file.
+ROOT macro for quickly plotting **DDAS digitizer traces** (ADC samples vs sample index) from a SECAR “dumpedfiles” ROOT file. To create it run the create_rawROOT.sh from the sort_runs.sh script that is in the [analysis_root repo]([url](https://github.com/SECAR-FRIB/analysis_root))
 
 It opens a ROOT file, reads the `dchan` TTree, loops over `ddasevent` entries, selects a specific **crate / module(slot) / channel**, pulls the waveform trace (`GetTrace()`), and overlays up to `maxTracesToPlot` traces on a canvas.
 
